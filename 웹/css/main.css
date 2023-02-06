@@ -1,0 +1,456 @@
+@charset "utf-8";
+
+@import url(reset.css);
+
+/* Web Font Set */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Nanum+Myeongjo:wght@800&display=swap');
+
+
+/* ******************* 레이아웃 구성시작 **************** */
+#wrap{ width: 100%; height: auto; }
+
+#header{ width: 100%; height: 70px; }
+#intro{ height: 863px; }
+#about{ padding-top: 96px; }
+#works{ padding: 96px 0; }
+#features{ height: 1104px; }
+#contact{ padding: 96px 0;  }
+#footer{ height: 576px; }
+
+.container{ width: 1170px; height: 100%; margin: auto; }
+
+ 
+/* ******************* 공통영역 선언시작 **************** */
+html{
+  font-family: arial, sans-serif;
+  color: #333;
+}
+
+
+/* Button Style Settings */
+.btn{
+  display: inline-block;
+  border: 1px solid #fff;
+  text-align: center;
+  font: 400 1.7rem/48px 'Roboto', sans-serif;
+  border-radius: 24px;
+  width: 200px;
+  height: 48px;
+}
+
+.btn1{  
+  color: #fff;
+}
+.btn1:hover{
+  color: #333;
+  background-color: #fff;
+}
+
+.btn2{
+  color: #333;
+  border: 1px solid #333;
+}
+.btn2:hover{
+  color: #fff;
+  background-color: #333;
+}
+
+
+/* Title Style Settings */
+.title{height: 144px; text-align: center; margin-bottom: 72px;}
+.title h2{
+  height: 72px;
+  margin-bottom: 24px;
+  font:400 6rem/48px 'Roboto', sans-serif;
+  position: relative;
+}
+.title h2::after{
+  content:'';
+  display: block;
+  width: 70px;
+  height: 3px;
+  background-color: #333;
+  position: absolute; bottom: 0; left: 50%;
+  margin-left: -35px;
+}
+.title p{
+  width: 430px;
+  height: 48px;
+  font: 1.4rem arial, sans-serif;
+  margin: auto;
+}
+
+ 
+
+
+/* ******************* 개별영역 선언시작 **************** */
+
+/* ************* header Area Start *********** */
+#header{
+  position: absolute; top: 48px; left: 0;
+  z-index: 9999;
+}
+
+/* Logo */
+#header h1{ width: 70px; height: 70px; float: left; margin-right: 50px; }
+#header h1 a{ background-image: url(../images/logo.png); }
+
+/* Gnb */
+#header .gnb{width: 460px; height: 70px; padding-top: 20px; float: left;}
+#header .gnb li{height: 30px; float: left;}
+#header .gnb li a{
+  display: block;
+  height: 100%;
+  padding: 0 20px;
+  font: 500 1.4rem/30px 'Roboto', sans-serif;
+  border: 2px solid rgba(255,255,255, 0);
+  color: #fff;
+}
+#header .gnb li a:hover{
+  border: 2px solid rgba(255,255,255, 1);
+}
+
+/* icon-group */
+#header .icon-group{
+  width: 120px;
+  height: 70px;
+  line-height: 70px;
+  float: right;  
+  text-align: right;
+}
+#header .icon-group a{
+  color: #fff; 
+  font-size: 1.8rem;
+  margin-left: 15px;
+}
+#header .icon-group a:hover{
+  color: #fc0;
+}
+
+
+/* ************* intro Area Start *********** */
+#intro{
+  background: url(../images/intro-bg.png) no-repeat top center;
+  background-size: cover;
+}
+#intro .container{position: relative; }
+#intro .text-box{
+  width: 700px;
+  height: 336px;
+  position: absolute; left: 0; top: 50%;
+  margin-top: -168px;
+}
+#intro .text-box h2{
+  font: 400 6rem/62px 'EB Garamond', sans-serif;
+  color: #fff;
+  margin-bottom: 96px;
+}
+
+
+/* ************* about Area Start *********** */
+
+/* Content Area Start */
+#about .content{ 
+  height: 408px; margin-bottom: 96px;
+}
+#about .content .container{
+  background: url(../images/about-img.png) no-repeat -70px 0;
+}
+
+#about .content .right-box{
+  width: 770px;
+  float: right;
+}
+#about .content .right-box::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+#about .content .right-box>div{
+  width: 368px;
+  height: 120px;
+  margin: 0 30px 24px 0;
+  float: left;
+  padding-left: 100px;
+  position: relative;
+}
+#about .content .right-box>div:nth-child(2n){margin-right: 0;}
+#about .content .right-box>div:nth-child(n+5){margin-bottom: 0;}
+#about .content .right-box>div h3{
+  height: 24px;
+  font: bold 1.6rem/24px 'Nanum Gothic', sans-serif;
+  margin-bottom: 24px;
+}
+#about .content .right-box>div .icon{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid #333;
+  text-align: center;
+  line-height: 70px;
+  font-size: 3.3rem;
+  position: absolute; left: 0; top: 0;
+}
+
+
+/* Whatido Area Start */
+#about .whatido{ 
+  height: 624px; 
+  display: flex;
+}
+#about .whatido>div{
+  flex: 1;
+  background-color: #e2e2e2;
+  padding: 168px 200px 0 70px;
+}
+#about .whatido>div:nth-child(2){
+  color: #fff;
+  background-color: #333;
+}
+
+#about .whatido>div .deco{
+  height: 24px;
+  font: 800 1.8rem/24px 'Nanum Myeongjo', sans-serif;
+}
+#about .whatido>div h3{
+  height: 48px;
+  font: 500 2.6rem/48px 'Roboto', sans-serif;
+  margin-bottom: 24px;
+}
+#about .whatido>div p{
+  font: 1.4rem arial, sans-serif;
+  margin-bottom: 72px;
+}
+
+
+
+
+/* ************* works Area Start *********** */
+#works .content .work{
+  height: 336px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+#works .content .work>div{
+  width: 585px;
+  padding-left: 115px;
+  position: relative;
+}
+#works .content .work2{
+  flex-direction: row-reverse;
+}
+#works .content .work2>div{
+  padding: 0 115px 0 0;
+  text-align: right;
+}
+
+#works .content .work .count{
+  width: 85px;
+  height: 85px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  font: 500 3rem/85px 'Roboto', sans-serif;
+  position: absolute; left: 0; top: 0;
+}
+#works .content .work2 .count{
+  /* 포지션 위치를 재선언시 초기화 한 다음 새로 선언해줄 것! */
+  left: auto;  /* 초기화 설정 : 'auto' 값 선언 */
+  right: 0;
+}
+
+#works .content .work h3{
+  height: 24px;
+  font: 800 1.8rem/24px 'Nanum Gothic', sans-serif;
+  margin-bottom: 24px;
+}
+#works .content .work p{margin-bottom: 120px;}
+#works .content .work a{
+  display: block;
+  width: 100px;
+  height: 24px;
+  float: right;
+  font: 500 1.4rem/24px 'Roboto', sans-serif;
+}
+
+
+/* ************* features Area Start *********** */
+#features{ display: flex; }
+
+/* left-box Area Start */
+#features .left-box{ flex: 1; }
+#features .left-box img{ width: 100%; height: 100%; }
+
+/* right-box Area Start */
+#features .right-box{ 
+  flex: 2; 
+  background-color: #e2e2e2; 
+  position: relative;
+}
+
+#features .right-box::before, 
+#features .right-box::after{
+  content: '';
+  display: block;
+  background-color: #ccc;
+  position: absolute; left: 50%; top: 50%;
+  
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+#features .right-box::before{ width: 85%; height: 1px; }
+#features .right-box::after{ width: 1px; height: 85%; }
+
+#features .right-box>div{
+  width: 50%;
+  height: 552px;
+  float: left;
+  padding: 216px 0 0 130px;
+}
+#features .right-box>div .icon{
+  height: 48px;
+  font-size: 3.5rem;
+  line-height: 48px;
+}
+#features .right-box>div h3{
+  height: 48px;
+  font: 500 2.1rem/48px 'Roboto', sans-serif;
+}
+#features .right-box>div p{ font-size: 1.4rem; }
+
+
+/* ************* contact Area Start *********** */
+#contact{
+  background: url(../images/contact-bg.png) no-repeat 0 0;
+}
+
+#contact form{ width: 970px; margin: auto; }
+#contact form>div{margin-bottom: 24px;}
+#contact form>div:first-child{
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+}
+#contact form>div:first-child .form-group{
+  width: 470px;
+  height: 48px;
+}
+
+#contact form input, #contact form textarea{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-bottom: 1px solid #333;
+  font: bold 1.4rem 'Nanum Gothic', sans-serif;
+}
+#contact form input{ height: 48px; }
+#contact form p{
+  height: 48px;
+  margin-top: 72px;
+  text-align: center;
+}
+#contact form p a{
+  width: 170px; 
+  height: 40px; 
+  line-height: 40px;
+}
+
+
+/* ************* footer Area Start *********** */
+
+/* f-top Area Start */
+#footer .f-top{
+  height: 504px;
+  background-color: #333;
+  color: #fff;
+}
+#footer .f-top .container{
+  padding: 72px 0;
+  display: flex;
+  justify-content: space-between;
+}
+#footer .f-top .container>div{
+  width: 370px;
+}
+
+#footer .f-top h3{
+  height: 48px;
+  font: bold 2rem/24px 'Nanum Gothic', sans-serif;
+  position: relative;
+  margin-bottom: 24px;
+}
+#footer .f-top h3::after{
+  content:'';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #fff;
+  position: absolute; left: 0; bottom: 0;
+}
+
+
+
+/* f-box1 */
+#footer .f-top .f-box1 .copy-logo{
+  width: 70px; 
+  height: 70px;
+  margin-bottom: 48px;
+}
+
+#footer .f-top .f-box1 address{
+  height: 120px;
+  margin-bottom: 72px;
+  font: 400 1.4rem/40px arial, sans-serif;
+}
+#footer .f-top .f-box1 address span{
+  display: inline-block;
+  width: 25px;
+  font-size: 2.5rem;
+  margin-right: 15px;
+  text-align: center;
+}
+#footer .f-top .f-box1 address span:last-child{
+  font-size: 2rem;
+}
+
+#footer .f-top .f-box1 .sns-group{
+  height: 24px;
+}
+#footer .f-top .f-box1 .sns-group a{
+  color: #fff;
+  font-size: 2rem;
+  margin-right: 15px;
+}
+#footer .f-top .f-box1 .sns-group a:hover{color: #fc0;}
+
+
+/* f-box2 */
+#footer .f-top .f-box2{padding-right: 70px;}
+#footer .f-top .f-box2 p{
+  margin-bottom: 24px;
+  font: 1.4rem/21px arial, sans-serif;
+}
+
+
+/* f-box3 */
+#footer .f-top .f-box3 li{margin-bottom: 15px;}
+#footer .f-top .f-box3 li i{margin-right: 7px;}
+
+
+/* f-bottom Area Start */
+#footer .f-bottom{
+  height: 72px;
+}
+
+#footer .f-bottom p{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 72px;
+}
+
+ 
